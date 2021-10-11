@@ -2,6 +2,7 @@ import de.ur.mi.oop.app.GraphicsApp;
 import de.ur.mi.oop.colors.Color;
 import de.ur.mi.oop.colors.Colors;
 import de.ur.mi.oop.events.GraphicsAppMouseListener;
+import de.ur.mi.oop.events.MousePressedEvent;
 import de.ur.mi.oop.graphics.Circle;
 import de.ur.mi.oop.launcher.GraphicsAppLauncher;
 
@@ -25,6 +26,8 @@ public class ClickableCircleRain extends GraphicsApp implements GraphicsAppMouse
     private Circle[] circles;
     private float[] circleSpeeds;
 
+    private int counter = 0;
+
     /**
      * Die initialize-Methode wird einmalig zum Start des Programms
      * aufgerufen.
@@ -45,6 +48,25 @@ public class ClickableCircleRain extends GraphicsApp implements GraphicsAppMouse
     public void draw() {
         drawBackground(BACKGROUND_COLOR);
         drawCircles();
+    }
+
+    /**
+     * Die onMousePressed-Methode wird vom System jedes Mal aufgerufen, wenn
+     * eine Maustaste gedrückt wurde.
+     *
+     * @param   mouseEvent   Im mouseEvent sind Zeit, Position und Taste des Drucks gespeichert.
+     */
+    @Override
+    public void onMousePressed(MousePressedEvent mouseEvent) {
+        for (int i = 0; i < CIRCLE_COUNT; i++) {
+            if (circles[i].hitTest(mouseEvent.getXPos(), mouseEvent.getYPos())) {
+                circles[i].setColor(Colors.RED);
+            }
+
+            if (checkCircleColors()) {
+                setupCirclesAndSpeeds();
+            }
+        }
     }
 
     private void setupCanvas() {
@@ -86,6 +108,19 @@ public class ClickableCircleRain extends GraphicsApp implements GraphicsAppMouse
             circles[i] = new Circle(CIRCLE_RADIUS + i * CIRCLE_WIDTH, CIRCLE_RADIUS, CIRCLE_RADIUS, Colors.getRandomColor());
             circleSpeeds[i] = rand.nextFloat() * MAX_SPEED;
         }
+    }
+
+    /**
+     * Die checkCircleColors()-Methode liefert true zurück,
+     * wenn alle Kreise rot eingefärbt wurden. Andernfalls gibt sie false zurück.
+     */
+    private boolean checkCircleColors() {
+        for (int i = 0; i < CIRCLE_COUNT; i++) {
+            if (circles[i].getColor() != Colors.RED) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public static void main(String[] args) {
