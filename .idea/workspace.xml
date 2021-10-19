@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51f700f2-c449-4471-8741-0544dc969a5d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ClickableCircleRain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assignment.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/redcirclerain.png" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/GraphicsApp-v1.4.9.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/GraphicsApp-v1.4.8.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,14 +33,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/GraphicsApp-v1.4.8.jar" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/GraphicsApp-v1.4.9.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\oop\tutorium2\U06-AnimationUndErsteSpiele-1-ClickableCircleRain\lib" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -113,6 +111,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
